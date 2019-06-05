@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    window.addEventListener('storage', (evt) => {
+        console.log(evt);
+        console.log('storage event trigger');
+    });
+</script>
+</body>
+</html>
+<!-- 关联文件 localStorage.html -->
+<!--
+    一种解决浏览器中同域名下不同Tab之间通信问题的解决方案
+    通过监听storage事件来实现（另一个页面进行localStorage.setItem操作，设置不同的值时会触发storage事件）
+-->

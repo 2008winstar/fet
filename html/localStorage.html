@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="add">Add</button>
+<script>
+    const add = document.getElementById('add');
+    add.addEventListener('click', () => {
+        localStorage.setItem('test', Date.now() + '');
+    });
+</script>
+</body>
+</html>
+<!-- 关联文件 storageEvent.html -->
+<!--
+    一种解决浏览器中同域名下不同Tab之间通信问题的解决方案
+    通过localStorage.setItem设置不同的值，触发storage事件，另一个（tab的）页面能收到此类事件
+-->
